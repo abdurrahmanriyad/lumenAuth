@@ -19,7 +19,9 @@ class LumenAuthServiceProvider extends ServiceProvider
             return new LumenAuth();
         });
 
-        $this->app->withFacades(true, ['\Abdurrahmanriyad\LumenAuth\Facades\LumenAuthFacade' => 'LumenAuthFacade']);
+        if (!class_exists('JWTAuth')) {
+            class_alias(LumenAuthFacade::class, 'LumenAuthFacade');
+        }
     }
 
     public function provides()
