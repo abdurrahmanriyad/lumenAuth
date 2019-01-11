@@ -14,7 +14,7 @@ class LumenAuthServiceProvider extends ServiceProvider
             $this->app->routeMiddleware(['lumenAuth' => \Abdurrahmanriyad\LumenAuth\Middleware\LumenAuthenticateMiddleware::class]);
         }
 
-        $this->app->bind('lumenauthfacade', function () {
+        $this->app->singleton('lumenauthfacade', function () {
             return new LumenAuth();
         });
         $this->app->alias('lumenauthfacade', LumenAuth::class);
