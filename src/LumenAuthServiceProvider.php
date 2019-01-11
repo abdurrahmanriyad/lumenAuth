@@ -19,7 +19,8 @@ class LumenAuthServiceProvider extends ServiceProvider
             return new LumenAuth();
         });
 
-        if (!class_exists('JWTAuth')) {
+        // adds alias for the class with namespace
+        if (!class_exists('LumenAuthFacade')) {
             class_alias(LumenAuthFacade::class, 'LumenAuthFacade');
         }
     }
