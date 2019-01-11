@@ -19,7 +19,7 @@ class LumenAuthServiceProvider extends ServiceProvider
             return new LumenAuth();
         });
 
-        $this->app->alias('LumenAuthFacade', LumenAuthFacade::class);
+        $this->app->withFacades(true, ['\Abdurrahmanriyad\LumenAuth\Facades\LumenAuthFacade' => 'LumenAuthFacade']);
     }
 
     public function provides()

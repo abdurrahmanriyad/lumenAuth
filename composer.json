@@ -30,10 +30,7 @@
       "laravel": {
           "providers": [
               "Abdurrahmanriyad\\LumenAuth\\LumenAuthServiceProvider"
-          ],
-          "aliases": {
-              "LumenAuthFacade": "Abdurrahmanriyad\\LumenAuth\\Facades\\LumenAuthFacade"
-          }
+          ]
       }
   }
 }
