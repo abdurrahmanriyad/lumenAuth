@@ -8,6 +8,6 @@ class LumenAuth extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'lumen_auth';
+        return 'lumenAuth';
     }
 }

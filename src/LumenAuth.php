@@ -1,5 +1,11 @@
 <?php
-namespace Abdurrahmanriyad\LumenAuth;
-class LumenAuth {
 
+namespace Abdurrahmanriyad\LumenAuth;
+
+class LumenAuth
+{
+    function test()
+    {
+        return "asdf";
+    }
 }

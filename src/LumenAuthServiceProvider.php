@@ -8,8 +8,9 @@ use Laravel\Lumen\Application as LumenApplication;
 class LumenAuthServiceProvider extends ServiceProvider
 {
 
-    public function boot()
+    public function register()
     {
+        $this->app->alias('lumenAuth', LumenAuth::class);
         if ($this->app instanceof LumenApplication) {
             $this->app->routeMiddleware(['lumenAuth' => \Abdurrahmanriyad\LumenAuth\Middleware\LumenAuthenticateMiddleware::class]);
         }

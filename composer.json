@@ -32,7 +32,7 @@
               "Abdurrahmanriyad\\LumenAuth\\LumenAuthServiceProvider"
           ],
           "aliases": {
-              "Permit": "Abdurrahmanriyad\\LumenAuth\\Facades\\LumenAuth"
+              "LumenAuthFacade": "Abdurrahmanriyad\\LumenAuth\\Facades\\LumenAuth"
           }
       }
   }
