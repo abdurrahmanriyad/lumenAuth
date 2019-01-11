@@ -4,10 +4,10 @@ namespace Abdurrahmanriyad\LumenAuth\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class LumenAuth extends Facade
+class LumenAuthFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'lumenauth';
+        return 'LumenAuthFacade';
     }
 }
