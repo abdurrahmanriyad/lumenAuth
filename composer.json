@@ -24,5 +24,16 @@
       "email": "me.riyad@outlook.com"
     }
   ],
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Abdurrahmanriyad\\LumenAuth\\LumenAuthServiceProvider"
+          ],
+          "aliases": {
+              "Permit": "Abdurrahmanriyad\\LumenAuth\\Facades\\LumenAuth"
+          }
+      }
+  }
 }
