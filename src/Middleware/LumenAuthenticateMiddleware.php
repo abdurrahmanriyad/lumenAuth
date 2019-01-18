@@ -1,7 +1,6 @@
 <?php
 namespace Abdurrahmanriyad\LumenAuth\Middleware;
 
-use App\Models\User;
 use Closure;
 use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
@@ -30,7 +29,13 @@ class LumenAuthenticateMiddleware {
                 'error' => 'An error while decoding token.'
             ], 400);
         }
-        $user = User::find($credentials->sub);
+
+        $user = null;
+        if (env('USER_MODEL')) {
+            if (class_exists(env('USER_MODEL'))) {
+                $user = env('USER_MODEL')::find($credentials->sub);
+            }
+        }
 
         app('auth')->viaRequest('api', function ($request)  use ($user){
             return $user;

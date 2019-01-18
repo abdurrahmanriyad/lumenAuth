@@ -4,8 +4,8 @@ namespace Abdurrahmanriyad\LumenAuth;
 
 class LumenAuth
 {
-    function test()
-    {
-        return "asdf";
-    }
+//    function test()
+//    {
+//        return "";
+//    }
 }
