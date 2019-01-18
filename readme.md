@@ -9,7 +9,7 @@ LumenAuth is a simple authentication package for lumen. This enables user to get
 ```bash
 composer require abdurrahmanriyad/lumenauth
 ```
-- Add the following line on **bootstrap/app.php** file
+- Add the following line to **bootstrap/app.php** file
 
 ```php
 $app->register(\Abdurrahmanriyad\LumenAuth\LumenAuthServiceProvider::class);
