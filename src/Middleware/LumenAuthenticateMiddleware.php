@@ -19,14 +19,15 @@ class LumenAuthenticateMiddleware {
         }
 
         try {
-            $credentials = JWT::decode($token, env('JWT_SECRET'), ['HS256']);
+            $credentials = JWT::decode($token, env('LUMEN_AUTH_SECRET'), ['HS256']);
         } catch (ExpiredException $e) {
             return response()->json([
                 'error' => 'Provided token is expired.'
             ], 400);
         } catch (\Exception $e) {
+            dd($e);
             return response()->json([
-                'error' => 'An error while decoding token.'
+                'error' => 'Invalid token.'
             ], 400);
         }
 
