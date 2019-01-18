@@ -35,8 +35,8 @@ class LumenAuthenticateMiddleware {
             if (class_exists(env('USER_MODEL'))) {
                 $user = env('USER_MODEL')::find($credentials->sub);
             }
-        } else if (class_exists('App\User')) {
-            $user = App\User::find($credentials->sub);
+        } else if (class_exists('\App\User')) {
+            $user = \App\User::find($credentials->sub);
         }
 
         app('auth')->viaRequest('api', function ($request)  use ($user){
