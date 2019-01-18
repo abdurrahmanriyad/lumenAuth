@@ -1,4 +1,4 @@
-# LumenAuth
+# lumenAuth
 
 LumenAuth is a simple authentication package for lumen. This enables user to get rid of primary hassle to setup token based authentication in lumen. 
 
