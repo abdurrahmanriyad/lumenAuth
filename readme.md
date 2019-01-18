@@ -11,7 +11,7 @@ composer require abdurrahmanriyad/lumenauth
 ```
 - Add the following line on **bootstrap/app.php** file
 
-```bash
+```php
 $app->register(\Abdurrahmanriyad\LumenAuth\LumenAuthServiceProvider::class);
 ```
 
@@ -28,7 +28,7 @@ Add **lumenAuth** middleware to routes you want authentication
 
 For example,
 
-```python
+```php
 $router->group(['middleware' => 'lumenAuth'],
     function () use ($router) {
         //your routes
